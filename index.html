@@ -6,6 +6,7 @@
     <title>Masjid Al-Ikhlas - Ramadhan 1447 H</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕌</text></svg>">
 
+    <!-- CSS Bootstrap 5 & FontAwesome -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
@@ -39,9 +40,10 @@
         opacity: 0.5;
       }
 
-      .biodata-section {
+      .biodata-compact {
         background: #f8f9fa;
-        border-bottom: 2px solid #e9ecef;
+        border-bottom: 1px solid #e9ecef;
+        font-size: 0.85rem;
       }
 
       html {
@@ -50,6 +52,8 @@
     </style>
   </head>
   <body>
+
+    <!-- NAVIGATION BAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div class="container">
         <a class="navbar-brand fw-bold" href="#">
@@ -60,9 +64,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#biodata">Profil Mahasiswa</a></li>
             <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
             <li class="nav-item"><a class="nav-link" href="#artikel">Kisah Qur'ani</a></li>
+            <li class="nav-item"><a class="nav-link" href="#edukasi">Edukasi</a></li>
             <li class="nav-item"><a class="nav-link" href="#kegiatan">Kegiatan</a></li>
             <li class="nav-item"><a class="nav-link btn btn-outline-warning ms-lg-3 px-3" href="#donasi">Donasi</a></li>
           </ul>
@@ -70,24 +74,26 @@
       </div>
     </nav>
 
-    <section id="biodata" class="py-4 biodata-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-2 text-center text-md-start">
-                    <!-- <img src="https://ui-avatars.com/api/?name=Adam+Mubarok&background=198754&color=fff&size=128" alt="Foto Profil" class="rounded-circle shadow-sm mb-3 mb-md-0"> -->
-                  <img src="adam.png" alt="Foto Profil Adam Mubarok" class="rounded-circle shadow-sm mb-3 mb-md-0" style="width: 128px; height: 128px; object-fit: cover;">                </div>
-                <div class="col-md-10">
-                    <h5 class="text-success fw-bold mb-1">Biodata Mahasiswa</h5>
-                    <div class="row">
-                        <div class="col-sm-4"><strong>Nama:</strong> Adam Mubarok</div>
-                        <div class="col-sm-4"><strong>NIM:</strong> 312310301</div>
-                        <div class="col-sm-4"><strong>Mata Kuliah:</strong> Pendidikan Agama Islam 6</div>
-                    </div>
-                </div>
+    <!-- SECTION: BIODATA (COMPACT VERSION) -->
+    <section id="biodata" class="py-2 biodata-compact text-secondary">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+          <div class="d-flex align-items-center gap-2">
+            <img src="adam.png" alt="Adam Mubarok" class="rounded-circle border" style="width: 35px; height: 35px; object-fit: cover;">
+            <div>
+              <span class="text-dark fw-semibold">Adam Mubarok</span>
+              <span class="text-muted mx-1">|</span>
+              <span>NIM: 312310301</span>
             </div>
+          </div>
+          <div>
+            <i class="fas fa-book-open text-success me-1"></i> Mata Kuliah: <span class="text-dark">Pendidikan Agama Islam 6</span>
+          </div>
         </div>
+      </div>
     </section>
 
+    <!-- HEADER: HERO -->
     <header id="beranda" class="hero-ramadan d-flex align-items-center">
       <div class="container">
         <div class="row align-items-center">
@@ -116,39 +122,108 @@
       </div>
     </header>
 
+    <!-- SECTION: ARTIKEL KISAH -->
     <section id="artikel" class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold text-success">Kisah Dalam Al-Qur'an</h2>
-                <p class="text-muted">Mengambil Ibrah (Pelajaran) dari Perjalanan Umat Terdahulu</p>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card border-0 shadow-sm p-4">
-                        <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?auto=format&fit=crop&w=800&q=80" class="card-img-top rounded mb-4" alt="Ilustrasi Gua">
-                        <h3 class="fw-bold">Keteguhan Iman Ashabul Kahfi (Penghuni Gua)</h3>
-                        <p class="text-muted small">Dikutip dari: Tafsir Ibnu Katsir & QS. Al-Kahf: 9-26</p>
-                        <hr>
-                        <p>Kisah Ashabul Kahfi menceritakan tentang tujuh pemuda beriman yang hidup di tengah masyarakat penyembah berhala. Demi mempertahankan akidah mereka dari kekejaman Raja Diqyanus, mereka melarikan diri dan berlindung di dalam gua.</p>
-                        
-                        <blockquote class="bg-light p-3 border-start border-success border-4 italic">
-                            "Maka Kami tutup telinga mereka beberapa tahun dalam gua itu..." (QS. Al-Kahf: 11)
-                        </blockquote>
-
-                        <p>Allah SWT menidurkan mereka selama <strong>309 tahun</strong> hijriah. Selama itu pula, Allah menjaga jasad mereka agar tidak hancur dimakan tanah dengan membolak-balikkan badan mereka ke kanan dan ke kiri. Kisah ini mengajarkan kita bahwa bagi Allah, tidak ada yang mustahil dalam melindungi hamba-Nya yang sungguh-sungguh menjaga iman di tengah fitnah akhir zaman.</p>
-                        
-                        <h5 class="fw-bold mt-4">Hikmah yang Bisa Diambil:</h5>
-                        <ul>
-                            <li>Pentingnya mencari lingkungan yang baik (*circle* yang mendukung iman).</li>
-                            <li>Kekuasaan mutlak Allah atas waktu dan kematian.</li>
-                            <li>Doa adalah senjata utama saat menghadapi kesulitan yang tampak buntu.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold text-success">Kisah Dalam Al-Qur'an</h2>
+          <p class="text-muted">Mengambil Ibrah (Pelajaran) dari Perjalanan Umat Terdahulu</p>
         </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-8">
+            <div class="card border-0 shadow-sm p-4">
+              <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?auto=format&fit=crop&w=800&q=80" class="card-img-top rounded mb-4" alt="Ilustrasi Gua">
+              <h3 class="fw-bold">Keteguhan Iman Ashabul Kahfi (Penghuni Gua)</h3>
+              <p class="text-muted small">Dikutip dari: Tafsir Ibnu Katsir & QS. Al-Kahf: 9-26</p>
+              <hr>
+              <p>Kisah Ashabul Kahfi menceritakan tentang tujuh pemuda beriman yang hidup di tengah masyarakat penyembah berhala. Demi mempertahankan akidah mereka dari kekejaman Raja Diqyanus, mereka melarikan diri dan berlindung di dalam gua.</p>
+              <blockquote class="bg-light p-3 border-start border-success border-4 italic">
+                "Maka Kami tutup telinga mereka beberapa tahun dalam gua itu..." (QS. Al-Kahf: 11)
+              </blockquote>
+              <p>Allah SWT menidurkan mereka selama <strong>309 tahun</strong> hijriah. Selama itu pula, Allah menjaga jasad mereka agar tidak hancur dimakan tanah dengan membolak-balikkan badan mereka ke kanan dan ke kiri. Kisah ini mengajarkan kita bahwa bagi Allah, tidak ada yang mustahil dalam melindungi hamba-Nya yang sungguh-sungguh menjaga iman di tengah fitnah akhir zaman.</p>
+              
+              <h5 class="fw-bold mt-4">Hikmah yang Bisa Diambil:</h5>
+              <ul>
+                <li>Pentingnya mencari lingkungan yang baik (*circle* yang mendukung iman).</li>
+                <li>Kekuasaan mutlak Allah atas waktu dan kematian.</li>
+                <li>Doa adalah senjata utama saat menghadapi kesulitan yang tampak buntu.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- SECTION: EDUKASI POSTER -->
+    <section id="edukasi" class="py-5 bg-white">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold text-success">Edukasi</h2>
+          <p class="text-muted">Membangun Karakter Muslim Melalui Sunnah Sehari-hari</p>
+        </div>
+
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="badge bg-success mb-3 px-3 py-2 rounded-pill shadow-sm">Panduan Sunnah</span>
+            <h3 class="fw-bold mb-3">Adab & Aturan Saat Makan-Minum</h3>
+            <p class="text-muted lead">
+              Islam tidak hanya mengatur perkara ibadah besar, tetapi juga detail kecil seperti cara kita makan dan minum demi menjaga keberkahan dan kesehatan tubuh.
+            </p>
+            
+            <div class="mt-4">
+              <div class="d-flex align-items-start mb-3">
+                <div class="bg-light p-3 rounded-circle me-3 text-success"><i class="fas fa-hand-holding-heart fa-lg"></i></div>
+                <div>
+                  <h6 class="fw-bold mb-1">Membaca Basmalah & Menggunakan Tangan Kanan</h6>
+                  <p class="text-muted small mb-0">Menghadirkan rasa syukur dan menutup celah setan untuk ikut serta dalam hidangan.</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-start mb-3">
+                <div class="bg-light p-3 rounded-circle me-3 text-success"><i class="fas fa-chair fa-lg"></i></div>
+                <div>
+                  <h6 class="fw-bold mb-1">Makan Sambil Duduk & Tidak Meniup Makanan</h6>
+                  <p class="text-muted small mb-0">Menjaga kesopanan, kesehatan lambung, serta kebersihan hidangan dari udara nafas.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 d-flex gap-3">
+              <button class="btn btn-success px-4 py-2 fw-bold shadow-sm" data-bs-toggle="modal" data-bs-target="#posterModal">
+                <i class="fas fa-expand me-2"></i>Perbesar Poster
+              </button>
+              <a href="poster.png" class="btn btn-outline-success px-4 py-2 fw-bold" download>
+                <i class="fas fa-download me-2"></i>Unduh Poster
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 text-center">
+            <div class="position-relative d-inline-block shadow-lg rounded-4 overflow-hidden card-artikel">
+              <img src="poster.png" alt="Poster Adab Makan dan Minum" class="img-fluid" style="max-height: 550px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#posterModal">
+              <div class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-70 text-white p-2 text-center small">
+                <i class="fas fa-search-plus me-1"></i> Klik gambar untuk memperbesar
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL POPUP POSTER -->
+    <div class="modal fade" id="posterModal" tabindex="-1" aria-labelledby="posterModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-header border-0 p-0 justify-content-end">
+            <button type="button" class="btn-close btn-close-white p-3 fs-4" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center p-0">
+            <img src="poster.png" alt="Poster Adab Makan dan Minum Full" class="img-fluid rounded shadow-lg">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION: AGENDA KEGIATAN -->
     <section id="kegiatan" class="py-5 bg-light">
       <div class="container text-center">
         <h2 class="mb-5 fw-bold text-success">Agenda Utama Ramadhan</h2>
@@ -184,6 +259,7 @@
       </div>
     </section>
 
+    <!-- FOOTER -->
     <footer id="donasi" class="bg-dark text-white py-5">
       <div class="container text-center">
         <h5>Salurkan Infaq Terbaik Anda</h5>
@@ -193,6 +269,7 @@
       </div>
     </footer>
 
+    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
